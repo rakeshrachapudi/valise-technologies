@@ -21,21 +21,35 @@
         padding: 10%;
       }
 
+      p {
+        font-family: sans-serif;
+        font-size: 18px;
+      }
+
       .footer-container {
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
-        gap: 30px;
+        gap: 10%;
       }
 
       .footer-column {
         flex: 1;
-        min-width: 250px;
+        min-width: 350px;
+        /* max-width: 33%; */
+        padding: 0 15px;
+        box-sizing: border-box;
+      }
+
+      .footer-icons {
+        margin-top: 10px;
       }
 
       .footer-icons a {
         color: white;
         margin-right: 15px;
         font-size: 15px;
+        text-decoration: none;
       }
 
       .footer-bottom {
@@ -53,24 +67,36 @@
         height: 0.5px;
         background-color: gray;
         border: none;
-        margin-top: 30px;
+        margin-top: 20px;
       }
 
-      @media (max-width: 600px) {
+      @media (max-width: 1032px) {
         .footer-container {
           flex-direction: column;
-          justify-content: center;
           align-items: center;
+          gap: 0;
         }
+
         .footer-column {
+          max-width: 100%;
           text-align: center;
+          margin-bottom: 30px;
+        }
+
+        .footer-bottom {
+          justify-content: center;
         }
       }
 
-      @media (max-width: 768px) {
-        .footer-bottom {
-          justify-content: center;
-          text-align: center;
+      @media (min-width: 1033px) {
+        .footer-column {
+          margin-bottom: 40px;
+        }
+      }
+
+      @media (min-width: 1300px) {
+        .contact {
+          margin-left: -250px;
         }
       }
     </style>
@@ -78,19 +104,20 @@
   <body>
     <footer>
       <div class="footer-container">
+        <!-- Column 1 -->
         <div class="footer-column">
           <h1>
             <span style="color: white">Valise</span>
             <span style="color: orange">Technologies</span>
           </h1>
           <p style="color: gray">
-            Welcom to Valise Technologies, your gateway to boundless learning
+            Welcome to Valise Technologies, your gateway to boundless learning
             opportunities. We're dedicated to democratizing education, offering
             a diverse range of courses taught by industry experts. Our mission
             is to empower learners worldwide, fostering a community-driven
             platform where knowledge knows no limits.
           </p>
-          <div class="footer-icons style="margin-bottom: 10px">
+          <div class="footer-icons">
             <a href="https://facebook.com" target="_blank"
               ><i class="fab fa-facebook-f"></i
             ></a>
@@ -109,10 +136,8 @@
           </div>
         </div>
 
-        <div
-          class="footer-column"
-          style="display: flex; flex-direction: column"
-        >
+        <!-- Column 2 -->
+        <div class="footer-column">
           <h3>Quick Links</h3>
           <div style="color: darkgray">
             <p>Contact Us</p>
@@ -123,15 +148,13 @@
           </div>
         </div>
 
-        <div
-          class="footer-column"
-          style="display: flex; flex-direction: column"
-        >
+        <!-- Column 3 -->
+        <div class="footer-column contact">
           <h3>Contact</h3>
           <div style="color: darkgray">
             <p>
-              <i class="fas fa-map-marker-alt"></i> 304 S. Jones Blvd #520 Las
-              Vegas, NV 89107.
+              <i class="fas fa-map-marker-alt"></i> 304 S. Jones Blvd #520, Las
+              Vegas, NV 89107
             </p>
             <p><i class="fas fa-phone-alt"></i> +44 - 74539 13486</p>
             <p><i class="fas fa-envelope"></i> info@valisetechnologies.tech</p>
